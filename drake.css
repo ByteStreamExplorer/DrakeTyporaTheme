@@ -180,11 +180,13 @@ tspan {
     stroke-width: 1.5;
     stroke-dasharray: none;
     stroke: var(--text-color) !important;
+    fill: none !important;
 }
 .md-diagram-panel-preview .messageLine1 { /*虚线*/
     stroke-width: 1.5 !important;
     stroke-dasharray: 2, 2 !important;
     stroke: var(--text-color) !important;
+    fill: none !important;
 }
 .md-diagram-panel-preview .messageText { /*描述文字*/
     fill: var(--text-color) !important;
@@ -208,6 +210,7 @@ tspan {
 }
 .md-diagram-panel-preview .loopLine { /*循环标记虚线*/
     stroke: var(--text-color) !important;
+    fill: none !important;
 }
 .md-diagram-panel-preview .loopText, .md-diagram-panel-preview .loopText > tspan { /*循环名称*/
     fill: var(--text-color) !important;
@@ -219,8 +222,31 @@ tspan {
 pre.md-fences-advanced.md-focus .md-fences-adv-panel {
     border: none;
 }
-.md-diagram-panel-preview .edgePath .path { /*箭头*/
+.md-diagram-panel-preview .edgePath .path,
+.md-diagram-panel-preview .edgePath > path,
+.md-diagram-panel-preview .edgePaths .path,
+.md-diagram-panel-preview .edgePaths > path,
+.md-diagram-panel-preview .flowchart-link,
+.md-diagram-panel-preview .relationshipLine,
+.mermaid .edgePath .path,
+.mermaid .edgePath > path,
+.mermaid .edgePaths .path,
+.mermaid .edgePaths > path,
+.mermaid .flowchart-link,
+.mermaid .relationshipLine,
+[id^=mermaidChart] .edgePath .path,
+[id^=mermaidChart] .edgePath > path,
+[id^=mermaidChart] .edgePaths .path,
+[id^=mermaidChart] .edgePaths > path,
+[id^=mermaidChart] .flowchart-link,
+[id^=mermaidChart] .relationshipLine { /*连线*/
     stroke: var(--text-color) !important;
+    fill: none !important;
+}
+.md-diagram-panel-preview .arrowheadPath,
+.mermaid .arrowheadPath,
+[id^=mermaidChart] .arrowheadPath { /*箭头*/
+    fill: var(--text-color) !important;
 }
 .md-diagram-panel-preview .edgeLabel rect { /*条件文字背景*/
     fill: var(--bg-color) !important;
